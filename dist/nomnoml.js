@@ -279,7 +279,7 @@ skanaar.Svg = function (globalStyle){
 		background: function (/*r, g, b*/){},
 		clear: function (){},
 		circle: function (x, y, r){
-			var attr = (arguments.length === 2) ? 
+			var attr = (arguments.length === 2) ?
 					{r: y, cx: tX(x.x), cy: tY(x.y)} :
 					{r: r, cx: tX(x),   cy: tY(y)}
 			var element = Element('circle', attr)
@@ -335,7 +335,7 @@ skanaar.Svg = function (globalStyle){
 		},
 		lineWidth: function (w){ globalStyle += ';stroke-width:'+w},
 		measureText: function (s){
-			return { width: s.length * 8.5 }
+			return { width: s.replace(/<.*?>/g, '').length * 9 }
 		},
 		moveTo: function (x, y){
 			last(elements).attr.d += ('M' + tX(x) + ' ' + tY(y) + ' ')
@@ -372,7 +372,7 @@ skanaar.Svg = function (globalStyle){
 				width: '100%',
 				height: '100%',
 				xmlns: 'http://www.w3.org/2000/svg',
-				'xmlns:xlink': 'http://www.w3.org/1999/xlink', 
+				'xmlns:xlink': 'http://www.w3.org/1999/xlink',
 				'xmlns:ev': 'http://www.w3.org/2001/xml-events',
 				style: lastDefined('font') + ';' + globalStyle
 			}

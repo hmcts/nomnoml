@@ -12,7 +12,7 @@
   "files": ["dist/nomnoml.js", "dist/nomnoml-cli.js"],
   "dependencies": {
     "lodash": "~3.7.0",
-    "dagre": "0.4.x"
+    "dagre": "0.8.5"
   },
   "devDependencies": {
     "jison": "0.4.13"

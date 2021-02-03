@@ -11,7 +11,7 @@
   "main": "dist/nomnoml.js",
   "files": ["dist/nomnoml.js", "dist/nomnoml-cli.js"],
   "dependencies": {
-    "lodash": "~3.7.0",
+    "lodash": "~3.10.1",
     "dagre": "0.4.x"
   },
   "devDependencies": {
